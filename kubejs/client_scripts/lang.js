@@ -8,6 +8,7 @@ ClientEvents.lang('en_us', event => {
 	event.renameItem("create:sweet_roll", "Cumbread");
 	event.renameItem("kubejs:gamble_coinflip", "Coinflip Token");
 	event.renameItem("kubejs:gamble_penguin", "Penguin Token");
+	event.renameItem("kubejs:penguin_controller", "Penguin");
 	event.renameItem("kubejs:gamble_dragon", "Dragon Token");
 	event.renameItem("kubejs:gamble_roulette", "Roulette Token");
 	event.renameItem("numismatics:creative_vendor", "Server Vendor");

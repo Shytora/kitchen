@@ -1,15 +1,11 @@
 console.info("[KITCHEN] Coinflip script loaded");
 
-const VALID_CURRENCY = [
-	"numismatics:cog",
-	"numismatics:crown",
-	"numismatics:sun"
-];
+
 
 const coinflip = (server, player) => {
 	const bet = player.offHandItem;
 
-	if (!VALID_CURRENCY.includes(bet.id)) {
+	if (!global.VALID_CURRENCY.includes(bet.id)) {
 		player.tell(Text.red("You must have valid coins in your offhand."));
 		return false;
 	}
