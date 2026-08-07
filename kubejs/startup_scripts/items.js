@@ -13,4 +13,10 @@ StartupEvents.registry('item', event => {
 		.tooltip("Use on air to get info")
 		.texture("kubejs:item/penguin");
 
+
+	event.create("crushed_coal_chunks");
+	event.create("molten_coal_chunks");
+	event.create("incomplete_processed_coal");
+	event.create("incomplete_coal");
+
 });
