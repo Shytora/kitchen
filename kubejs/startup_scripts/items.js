@@ -10,6 +10,7 @@ StartupEvents.registry('item', event => {
 	event.create("penguin_controller").unstackable()
 		.tooltip("Use on a MICROWAVE to continue gambling")
 		.tooltip("Sneak + Use on BANK TERMINAL to cash out")
-		.tooltip("Use on air to get info");
+		.tooltip("Use on air to get info")
+		.texture("kubejs:item/penguin");
 
 });

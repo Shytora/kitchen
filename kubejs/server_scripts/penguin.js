@@ -16,7 +16,7 @@ ItemEvents.rightClicked("kubejs:gamble_penguin", (event) => {
 			return;
 		}
 		event.player.offHandItem = "minecraft:air";
-		pdata.game.penguin = {"bet": bet, "stage": 0};
+		pdata.game.penguin = {"bet": bet, "stage": 0, "mult": 1};
 		event.player.give("kubejs:penguin_controller");
 		event.item.count--;
 		event.player.tell("Use your penguin on a Microwave to increase its value, but try not to kill it. Use on a bank terminal to cash out.")
@@ -40,6 +40,23 @@ ItemEvents.rightClicked("kubejs:penguin_controller", (event) => {
 
 		if (event.target.block == "minecraft:magma_block") {
 			event.player.tell("Microwave")
+			const stage = pdata.game.penguin.stage
+			if (stage >= stage.length) { //already finished
+				event.player.tell("Your penguin is safely defrosted! Cash out at a bank terminal.")
+			} else {
+				const mult = stages[stage]
+				if (Math.random() > 1 / mult) {
+					//win
+					pdata.game.penguin.stage++;
+					pdata.game.penguin.mult *= mult;
+				} else {
+					//lose
+					event.item.count--;
+					event.level.spawnParticles("minecraft:block{block_state:redstone_block}",
+						true, event.player.x, event.player.y, event.player.z, 0.1,0.1,0.1, 1, 5000);
+				}
+			}
+			
 		} else if (event.target.block == "numismatics:bank_terminal") {
 			event.player.tell("Cashout")
 		}
