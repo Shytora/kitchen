@@ -33,4 +33,18 @@ ServerEvents.recipes(event => {
 			event.recipes.createPressing("kubejs:incomplete_coal", "kubejs:incomplete_coal")
 		]).transitionalItem("kubejs:incomplete_coal").loops(4);
 
+	//Remove Quantum armor and stuff
+
+	event.remove({output: "advanced_ae:quantum_helmet"});
+	event.remove({output: "advanced_ae:quantum_chestplate"});
+	event.remove({output: "advanced_ae:quantum_leggings"});
+	event.remove({output: "advanced_ae:quantum_boots"});
+	event.remove({input: "advanced_ae:quantum_upgrade_base"});
+
+	//remove apothic flight pot
+
+	// event.remove({id:"minecraft:item.minecraft.potion.effect_id.apothic_attributes.levitation.to.item.minecraft.potion.effect_id.apothic_attributes.flying"});
+
+	// event.remove({output:"minecraft:potion", input:"minecraft:popped_chorus_fruit"});
+
 });
