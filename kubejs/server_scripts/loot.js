@@ -3,11 +3,11 @@ LootJS.lootTables(event => {
 	console.info('[KITCHEN] Loading loot tables')
 	//weight, min, max
     const TABLES_TO_ADD = {
-    	"minecraft:chests/ancient_city": [0.5, 1, 4],
-    	"minecraft:chests/bastion_bridge": [0.25, 1, 1, "numismatics:crown"], //1 per bridge
+    	"minecraft:chests/ancient_city": [0.7, 2, 5],
+    	"minecraft:chests/bastion_bridge": [0.3, 1, 1, "numismatics:crown"], //1 per bridge
     	"minecraft:chests/bastion_other": [0.05, 1, 1, "numismatics:crown"],
-    	"minecraft:chests/bastion_treasure": [0.75, 1, 1, "numismatics:crown"], //1 per treasure
-    	"minecraft:chests/buried_treasure": [1, 64, 128, "numismatics:spur"],
+    	"minecraft:chests/bastion_treasure": [1, 1, 1, "numismatics:crown"], //1 per treasure
+    	"minecraft:chests/buried_treasure": [1, 128, 256, "numismatics:spur"],
     	"minecraft:chests/desert_pyramid": [0.3, 1, 2], //4 per
     	"minecraft:chests/end_city_treasure": [0.2, 1, 3], //every chest
     	"minecraft:chests/igloo_chest": [1, 2, 7, "numismatics:bevel"], //1 per
