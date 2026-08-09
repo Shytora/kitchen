@@ -11,14 +11,12 @@ LootJS.lootTables(event => {
     	"minecraft:chests/desert_pyramid": [0.3, 1, 2], //4 per
     	"minecraft:chests/end_city_treasure": [0.2, 1, 3], //every chest
     	"minecraft:chests/igloo_chest": [1, 2, 7, "numismatics:bevel"], //1 per
-    	"minecraft:chests/jungle_pyramid": [0.6, 4, 6, "numismatics:sprocket"], //2 per
+    	"minecraft:chests/jungle_temple": [0.6, 4, 6, "numismatics:sprocket"], //2 per
     	"minecraft:chests/nether_bridge": [0.4, 1, 1],
     	"minecraft:chests/pillager_outpost": [1, 2, 4], //1 per
     	"minecraft:chests/ruined_portal": [0.2, 1, 1],
     	"minecraft:chests/shipwreck_treasure": [1, 1, 2], //only if wreck has treasure part
     	"minecraft:chests/simple_dungeon": [1, 1, 6, "numismatics:sprocket"],
-
-
     };
 
     event.create("lootjs:money_table").createPool(pool => {
