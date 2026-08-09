@@ -4,7 +4,7 @@ ClientEvents.lang('en_us', event => {
 	event.renameItem("numismatics:sprocket", "Iron Quarter");
 	event.renameItem("numismatics:cog", "Brass Dollar");
 	event.renameItem("numismatics:crown", "Gold Eight");
-	event.renameItem("numismatics:sun", "Netherite Coin");
+	event.renameItem("numismatics:sun", "Netherite Big Boy");
 	event.renameItem("create:sweet_roll", "Cumbread");
 	event.renameItem("kubejs:gamble_coinflip", "Coinflip Token");
 	event.renameItem("kubejs:gamble_penguin", "Penguin Token");
