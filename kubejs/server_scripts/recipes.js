@@ -19,12 +19,26 @@ ServerEvents.recipes(event => {
 		Fluid.of("minecraft:lava", 1000)
 	]);
 
+	event.recipes.createMixing("kubejs:molten_coal_chunks", [
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks",
+		"kubejs:crushed_coal_chunks"
+	]).superheated();
+
 	event.recipes.createSequencedAssembly(
 		["minecraft:diamond"], 
 		"kubejs:molten_coal_chunks", [
 			event.recipes.createFilling("kubejs:incomplete_processed_coal", ["kubejs:incomplete_processed_coal", Fluid.of("minecraft:water", 500)]),
+			event.recipes.createPressing("kubejs:incomplete_processed_coal", "kubejs:incomplete_processed_coal"),
+			event.recipes.createPressing("kubejs:incomplete_processed_coal", "kubejs:incomplete_processed_coal"),
+			event.recipes.createPressing("kubejs:incomplete_processed_coal", "kubejs:incomplete_processed_coal"),
 			event.recipes.createPressing("kubejs:incomplete_processed_coal", "kubejs:incomplete_processed_coal")
-		]).transitionalItem("kubejs:incomplete_processed_coal").loops(16);
+		]).transitionalItem("kubejs:incomplete_processed_coal").loops(4);
 
 	event.recipes.createSequencedAssembly(
 		["minecraft:coal"],

@@ -5,7 +5,7 @@ LootJS.lootTables(event => {
     const TABLES_TO_ADD = {
     	"minecraft:chests/abandoned_mineshaft": [0.1, 2, 3, "numismatics:sprocket"],
     	"minecraft:chests/ancient_city": [0.7, 2, 5],
-    	"minecraft:chests/bastion_bridge": [0.3, 1, 1, "numismatics:crown"], //1 per bridge
+    	"minecraft:chests/bastion_bridge": [0.5, 1, 1, "numismatics:crown"], //1 per bridge
     	"minecraft:chests/bastion_other": [0.05, 1, 1, "numismatics:crown"],
     	"minecraft:chests/bastion_treasure": [1, 1, 1, "numismatics:crown"], //1 per treasure
     	"minecraft:chests/buried_treasure": [1, 128, 256, "numismatics:spur"],
@@ -14,10 +14,11 @@ LootJS.lootTables(event => {
     	"minecraft:chests/igloo_chest": [1, 2, 7, "numismatics:bevel"], //1 per
     	"minecraft:chests/jungle_temple": [0.6, 4, 6, "numismatics:sprocket"], //2 per
     	"minecraft:chests/nether_bridge": [0.4, 1, 1],
-    	"minecraft:chests/pillager_outpost": [1, 2, 4], //1 per
-    	"minecraft:chests/ruined_portal": [0.2, 1, 1],
-    	"minecraft:chests/shipwreck_treasure": [1, 1, 2], //only if wreck has treasure part
+    	"minecraft:chests/pillager_outpost": [0.5, 3, 5, "numismatics:sprocket"], //1 per. minecolonies hijacks
+    	"minecraft:chests/ruined_portal": [0.4, 1, 1],
+    	"minecraft:chests/shipwreck_treasure": [1, 128, 256, "numismatics:spur"], //only if wreck has treasure part
     	"minecraft:chests/simple_dungeon": [1, 1, 6, "numismatics:sprocket"],
+    	"minecraft:pots/trial_chambers/corridor": [0.3, 1, 2, "numismatics:sprocket"],
 
     	"betterdeserttemples:chests/tomb_pharaoh": [1, 1, 3],
     	"betterdeserttemples:chests/storage": [0.3, 1, 10, "numismatics:bevel"],

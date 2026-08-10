@@ -14,15 +14,19 @@ const coinflip = (server, player) => {
 
 	server.tell(player.username + " flipped a coin...");
 
+	console.info(bet);
+	let betval = global.calculateCoinValue(bet);
+
 	server.scheduleInTicks(20*3, () => {
 		const random = Math.random();
 		if (random > 0.5) {
-			server.tell("and won!");
+			
 			const win = bet;
 			win.count = bet.count * 2;
 			player.give(Item.of(win));
+			server.tell(`and won $${betval/64}!`);
 		} else {
-			server.tell("and lost.");
+			server.tell(`and lost $${betval/64}.`);
 		}
 	})
 
