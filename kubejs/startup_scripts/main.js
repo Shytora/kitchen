@@ -54,3 +54,25 @@ global.calculateCoinValue = (coin) => {
 global.formatPrice = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
+
+global.updateStats = (pdata, amt, stat) => {
+    console.info("[KITCHEN] amt" + amt);
+    if (!pdata.getInt("win")) {
+        pdata.putInt("win", 0)
+    }
+    if (!pdata.getInt("loss")) {
+        pdata.putInt("loss", 0)
+    }
+    if (!pdata.getInt("largestWin")) {
+        pdata.putInt("largestWin", 0)
+    }
+    if (stat === "win") {
+        pdata.putInt("win", pdata.getInt("win") + amt);
+    } else if (stat === "loss") {
+        pdata.putInt("loss", pdata.getInt("loss") + amt);
+    } else if (stat === "largestWin") {
+        pdata.putInt("largestWin", Math.max(pdata.getInt("largestWin"), amt));
+    } else {
+        console.error("[KITCHEN] stat update failed: what is " + stat);
+    }
+}

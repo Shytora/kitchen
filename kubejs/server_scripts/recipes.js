@@ -61,4 +61,38 @@ ServerEvents.recipes(event => {
 
 	// event.remove({output:"minecraft:potion", input:"minecraft:popped_chorus_fruit"});
 
+	event.remove({output: "enchanted:enchanted_broomstick"});
+	event.remove({output: "enchanted:flying_ointment"});
+
+	const PNEUMATIC_REMOVE = [
+		"pneumaticcraft:pneumatic_boots",
+		"pneumaticcraft:pneumatic_chestplate",
+		"pneumaticcraft:pneumatic_helmet",
+		"pneumaticcraft:pneumatic_leggings",
+		"pneumaticcraft:air_conditioning_upgrade",
+		"pneumaticcraft:coordinate_tracker_upgrade",
+		"pneumaticcraft:elytra_upgrade",
+		"pneumaticcraft:ender_visor_upgrade",
+		"pneumaticcraft:flippers_upgrade",
+		"pneumaticcraft:gilded_upgrade",
+		"pneumaticcraft:search_upgrade",
+		"pneumaticcraft:jet_boots_upgrade_3",
+		"pneumaticcraft:jet_boots_upgrade_2",
+		"pneumaticcraft:jet_boots_upgrade_4",
+		"pneumaticcraft:jet_boots_upgrade_1",
+		"pneumaticcraft:jet_boots_upgrade_5",
+		"pneumaticcraft:jumping_upgrade_3",
+		"pneumaticcraft:jumping_upgrade_2",
+		"pneumaticcraft:jumping_upgrade_4",
+		"pneumaticcraft:jumping_upgrade_1",
+		"pneumaticcraft:night_vision_upgrade",
+		"pneumaticcraft:radiation_shielding_upgrade",
+		"pneumaticcraft:scuba_upgrade",
+		"pneumaticcraft:stomp_upgrade"
+	]
+
+	PNEUMATIC_REMOVE.forEach((e) => {
+		event.remove({output: e})
+	});
+
 });

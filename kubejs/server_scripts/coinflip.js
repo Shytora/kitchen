@@ -25,8 +25,11 @@ const coinflip = (server, player) => {
 			win.count = bet.count * 2;
 			player.give(Item.of(win));
 			server.tell(`and won $${betval/64}!`);
+			global.updateStats(player.persistentData, betval, "win")
+			global.updateStats(player.persistentData, betval, "largestWin")
 		} else {
 			server.tell(`and lost $${betval/64}.`);
+			global.updateStats(player.persistentData, betval, "loss")
 		}
 	})
 
