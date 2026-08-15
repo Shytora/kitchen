@@ -47,6 +47,8 @@ ServerEvents.recipes(event => {
 			event.recipes.createPressing("kubejs:incomplete_coal", "kubejs:incomplete_coal")
 		]).transitionalItem("kubejs:incomplete_coal").loops(4);
 
+	event.recipes.createSplashing(
+		[CreateItem.of("9x mythicmetals:silver_nugget"), CreateItem.of("create:experience_nugget", 0.5)], "create:crushed_raw_silver");
 	//Remove Quantum armor and stuff
 
 	event.remove({output: "advanced_ae:quantum_helmet"});
