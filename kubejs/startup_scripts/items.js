@@ -18,5 +18,5 @@ StartupEvents.registry('item', event => {
 	event.create("molten_coal_chunks");
 	event.create("incomplete_processed_coal");
 	event.create("incomplete_coal");
-
+	event.create("vanilla_beans");
 });
