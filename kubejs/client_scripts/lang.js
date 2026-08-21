@@ -12,4 +12,5 @@ ClientEvents.lang('en_us', event => {
 	event.renameItem("kubejs:gamble_dragon", "Dragon Token");
 	event.renameItem("kubejs:gamble_roulette", "Roulette Token");
 	event.renameItem("numismatics:creative_vendor", "Server Vendor");
+	event.renameItem("kubejs:vanilla_beans", "Vanilla Beans");
 })
