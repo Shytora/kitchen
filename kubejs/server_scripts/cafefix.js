@@ -180,16 +180,14 @@ ServerEvents.recipes(event => {
 		Fluid.of("createcafe:melted_sugar", 750)
 	]
 	).heated();
-	// vanilla bean crafting
-	event.recipes.createMixing
-	(
-		[Fluid.of("create_dragons_plus:white_dye", 1000), "kubejs:vanilla_beans"],
-	[
-		"minecraft:cocoa_beans",
-		Fluid.of("create_dragons_plus:white_dye", 1000)
-	]
-	);
+	// vanilla bean crafting 
 	
+	event.recipes.createHaunting
+	(
+	"kubejs:vanilla_beans",
+	"minecraft:cocoa_beans"
+	);
+
 	// a brief intermission for other stuff
 	
 	event.recipes.createFilling
